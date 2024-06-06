@@ -31,7 +31,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"c
+    query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
   register: cyberark_ssh_host_rsa_key_pub
   delegate_to: localhost
   no_log: true
