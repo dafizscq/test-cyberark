@@ -20,7 +20,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ ansible_hostname }}"
+    query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ inventory_hostname }}"
     # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_rsa_key
   delegate_to: localhost
@@ -34,7 +34,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
+    query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ inventory_hostname }}"
     # query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_rsa_key_pub
   delegate_to: localhost
@@ -49,7 +49,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ed25519_key_object_pattern }}-{{ ansible_hostname }}"
+    query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ed25519_key_object_pattern }}-{{ inventory_hostname }}"
     # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ed25519_key_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_ed25519_key
   delegate_to: localhost
@@ -63,7 +63,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ed25519_key_pub_object_pattern }}-{{ ansible_hostname }}"
+    query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ed25519_key_pub_object_pattern }}-{{ inventory_hostname }}"
     # query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ed25519_key_pub_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_ed25519_key_pub
   delegate_to: localhost
@@ -78,7 +78,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ecdsa_key_object_pattern }}-{{ ansible_hostname }}"
+    # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ecdsa_key_object_pattern }}-{{ inventory_hostname }}"
     query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ecdsa_key_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_ecdsa_key
   delegate_to: localhost
@@ -92,7 +92,7 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    # query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ecdsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
+    # query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ecdsa_key_pub_object_pattern }}-{{ inventory_hostname }}"
     query: "Safe={{ cyberark_certs_safe }};Object={{ cyberark_ssh_host_ecdsa_key_pub_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_ecdsa_key_pub
   delegate_to: localhost
