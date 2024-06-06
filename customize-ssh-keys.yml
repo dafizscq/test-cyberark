@@ -32,7 +32,7 @@
     client_cert: "{{ CYBERARK_CLIENT_CERT }}"
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
-    # app_id: "{{ cyberark_app_id }}"
+    app_id: "{{ cyberark_app_id }}"
     # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
     query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_rsa_key_pub
