@@ -2,6 +2,7 @@
 - name: Playbook to launch customize-ssh-keys.yml
   hosts: axinecidm01.ecommerce.inditex.grp
   gather_facts: false
+  become: true
   tasks:
     - name: Include vars
       include_vars:
