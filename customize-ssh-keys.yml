@@ -19,10 +19,11 @@
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
     app_id: "{{ cyberark_app_id }}"
-    query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ ansible_hostname }}"
+    # query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ ansible_hostname }}"
+    query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_rsa_key
   delegate_to: localhost
-  no_log: true
+  # no_log: true
   ignore_errors: true
 
 - name: "[CYBERARK] Get ssh_host_rsa_key_pub from Cyberark, don't fail if it doesn't exist"
@@ -31,11 +32,12 @@
     client_cert: "{{ CYBERARK_CLIENT_CERT }}"
     client_key: "{{ CYBERARK_PRIV_KEY }}"
     validate_certs: false
-    app_id: "{{ cyberark_app_id }}"
+    # app_id: "{{ cyberark_app_id }}"
+    # query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
     query: "Safe={{ cyberark_safe }};Object={{ cyberark_ssh_host_rsa_key_pub_object_pattern }}-{{ ansible_hostname }}"
   register: cyberark_ssh_host_rsa_key_pub
   delegate_to: localhost
-  no_log: true
+  # no_log: true
   ignore_errors: true
 
 - name: "[CYBERARK] Get ssh_host_ed25519_key from Cyberark, don't fail if it doesn't exist"
