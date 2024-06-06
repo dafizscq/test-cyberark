@@ -10,5 +10,3 @@ cyberark_ssh_host_ed25519_key_pub_object_pattern: Operating System-ITX-UNIX-200-
 cyberark_ssh_host_ecdsa_key_object_pattern: Operating System-ITX-UNIX-200-SC-ssh-ecdsa-key
 cyberark_ssh_host_ecdsa_key_pub_object_pattern: Operating System-ITX-UNIX-200-SC-ssh-ecdsa
 my_hostname: cnec2bh2.ecommerce.inditex.grp
-
-#ITX-UNIX-200-SC-SSHKEYS
