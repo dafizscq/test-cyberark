@@ -7,5 +7,5 @@
       include_vars:
         file: vars/main.yml
 
-    - name: Include customize-ssh-keys.yml
-      include_tasks: customize-ssh-keys.yml
+    - name: Include tasks from customize-ssh-keys.yml
+      ansible.builtin.include_tasks: customize-ssh-keys.yml
