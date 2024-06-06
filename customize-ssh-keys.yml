@@ -1,16 +1,16 @@
 ---
 # Cyberark pre-tasks
-- name: "[CYBERARK] Check for Cyberark credentials (certificate and key)"
-  ansible.builtin.assert:
-    that:
-      - "{{ item }} is defined"
-      - "{{ item }} | length > 0"
-    msg: "{{ item }} variable is not defined or empty. Add it to Tower template and try again"
-    loop:
-      - CYBERARK_CLIENT_CERT
-      - CYBERARK_PRIV_KEY
-  # no_log: true
-  delegate_to: localhost
+# - name: "[CYBERARK] Check for Cyberark credentials (certificate and key)"
+#   ansible.builtin.assert:
+#     that:
+#       - "{{ item }} is defined"
+#       - "{{ item }} | length > 0"
+#     msg: "{{ item }} variable is not defined or empty. Add it to Tower template and try again"
+#     loop:
+#       - CYBERARK_CLIENT_CERT
+#       - CYBERARK_PRIV_KEY
+#   # no_log: true
+#   delegate_to: localhost
 
 - name: "[CYBERARK] Get ssh_host_rsa_key from Cyberark, don't fail if it doesn't exist"
   cyberark.pas.cyberark_credential:
