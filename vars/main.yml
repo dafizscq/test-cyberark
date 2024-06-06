@@ -1,0 +1,7 @@
+
+cyberark_server_api: "https://axinpasccp.central.inditex.grp" # Used for GET operations (get existing passwords)
+cyberark_app_id: AppTowerECInfra
+cyberark_safe: AX-N-DIG-INFRA-SRVC
+cyberark_rsa_key_object_pattern: Application-ITX-APP-500-SC-Generic-rsa_key_object
+cyberark_ssh_host_ed25519_key_object_pattern: Operating System-ITX-UNIX-200-SC-ssh-ecdsa-key
+cyberark_ssh_host_ecdsa_key_object_pattern: Operating System-ITX-UNIX-200-SC-ssh-ecdsa

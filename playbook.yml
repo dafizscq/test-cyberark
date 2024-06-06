@@ -1,0 +1,11 @@
+---
+- name: Playbook to launch customize-ssh-keys.yml
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Include vars
+      include_vars:
+        file: vars/main.yml
+
+    - name: Include customize-ssh-keys.yml
+      include_tasks: customize-ssh-keys.yml
