@@ -9,7 +9,7 @@
     loop:
       - CYBERARK_CLIENT_CERT
       - CYBERARK_PRIV_KEY
-  no_log: true
+  # no_log: true
   delegate_to: localhost
 
 - name: "[CYBERARK] Get ssh_host_rsa_key from Cyberark, don't fail if it doesn't exist"
