@@ -1,6 +1,6 @@
 ---
 - name: Playbook to launch customize-ssh-keys.yml
-  hosts: axinecidm01.ecommerce.inditex.grp
+  hosts: all
   gather_facts: false
   become: true
   tasks:
