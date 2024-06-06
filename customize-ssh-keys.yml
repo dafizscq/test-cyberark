@@ -53,7 +53,7 @@
     # query: "Safe={{ cyberark_keys_safe }};Object={{ cyberark_ssh_host_ed25519_key_object_pattern }}-{{ my_hostname }}"
   register: cyberark_ssh_host_ed25519_key
   delegate_to: localhost
-  no_log: true
+  # no_log: true
   ignore_errors: true
 
 - name: "[CYBERARK] Get ssh_host_ed25519_key_pub from Cyberark, don't fail if it doesn't exist"
